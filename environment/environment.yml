@@ -1,6 +1,6 @@
 name: logbert
 dependencies:
   - python=3.9.7
-  - pip=22.0.4
+  - pip=22.2.2
   - pip:
     - -r requirements.txt

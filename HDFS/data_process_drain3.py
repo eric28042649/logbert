@@ -1,17 +1,19 @@
 import sys
 sys.path.append('../')
 
+import sys
 import os
 import re
 import json
 import pandas as pd
 from collections import defaultdict
 from tqdm import tqdm
-import numpy as np
-from logparser import Spell, Drain
+from drain3 import TemplateMiner
+from drain3.template_miner_config import TemplateMinerConfig
+from drain3.file_persistence import FilePersistence
 
 # get [log key, delta time] as input for deeplog
-input_dir  = os.path.expanduser('../dataset/hdfs/')
+input_dir  = os.path.expanduser('~/.dataset/hdfs/')
 output_dir = '../output/hdfs/'  # The output directory of parsing results
 log_file   = "HDFS.log"  # The input log file name
 
@@ -19,41 +21,49 @@ log_structured_file = output_dir + log_file + "_structured.csv"
 log_templates_file = output_dir + log_file + "_templates.csv"
 log_sequence_file = output_dir + "hdfs_sequence.csv"
 
-def mapping():
-    log_temp = pd.read_csv(log_templates_file)
-    log_temp.sort_values(by = ["Occurrences"], ascending=False, inplace=True)
-    log_temp_dict = {event: idx+1 for idx , event in enumerate(list(log_temp["EventId"])) }
-    print(log_temp_dict)
-    with open (output_dir + "hdfs_log_templates.json", "w") as f:
-        json.dump(log_temp_dict, f)
+# def mapping():
+#     log_temp = pd.read_csv(log_templates_file)
+#     log_temp.sort_values(by = ["Occurrences"], ascending=False, inplace=True)
+#     log_temp_dict = {event: idx+1 for idx , event in enumerate(list(log_temp["EventId"])) }
+#     print(log_temp_dict)
+#     with open (output_dir + "hdfs_log_templates.json", "w") as f:
+#         json.dump(log_temp_dict, f)
 
 
-def parser(input_dir, output_dir, log_file, log_format, type='drain'):
-    if type == 'spell':
-        tau        = 0.5  # Message type threshold (default: 0.5)
-        regex      = [
-            "(/[-\w]+)+", #replace file path with *
-            "(?<=blk_)[-\d]+" #replace block_id with *
+def parser(input_dir, output_dir, log_file, log_format):
+    # 初始化 Drain3
+    persistence_handler = FilePersistence("drain3_state.json")  # 保存狀態到文件
+    template_miner = TemplateMiner(persistence_handler)
+    
+    # 讀取日誌文件
+    with open(os.path.join(input_dir, log_file), 'r') as f:
+        logs = f.readlines()
+    
+    # 保存模板到文件
+    with open(log_templates_file, 'w') as f:
+        f.write("TemplateId, LogTemplate\n")
+    
+    # 保存結構化日誌到文件
+    with open(log_structured_file, 'w') as f:
+        f.write("LineId,Date,Time,Pid,Level,Component,Content,EventId\n")
+        
+        for i, log_line in enumerate(tqdm(logs, "Processing logs")):
+            # 使用正則表達式分割日誌條目
+            match = re.match(r'(\d{6}) (\d{6}) (\d+) (\w+) ([\w$.]+): (.*)', log_line.strip())
+            if match:
+                date, time, pid, level, component, content = match.groups()
+                
+                # 使用 Drain3 提取日誌模板
+                result = template_miner.add_log_message(content)
+                
+                # 如果模板是新的，將其保存到模板文件中
+                if result["change_type"] in ["cluster_created", "cluster_template_changed"]:
+                    with open(log_templates_file, 'a') as tmpl_file:
+                        tmpl_file.write(f"{result['cluster_id']}, {result['template_mined']}\n")
+                
+                # 將結構化的日誌保存到文件中，注意 content 字段用雙引號括起來
+                f.write(f"{i + 1},{date},{time},{pid},{level},{component},\"{content}\",{result['cluster_id']}\n")
 
-        ]  # Regular expression list for optional preprocessing (default: [])
-
-        parser = Spell.LogParser(indir=input_dir, outdir=output_dir, log_format=log_format, tau=tau, rex=regex, keep_para=False)
-        parser.parse(log_file)
-
-    elif type == 'drain':
-        regex = [
-            r"(?<=blk_)[-\d]+", # block_id
-            r'\d+\.\d+\.\d+\.\d+',  # IP
-            r"(/[-\w]+)+",  # file path
-            #r'(?<=[^A-Za-z0-9])(\-?\+?\d+)(?=[^A-Za-z0-9])|[0-9]+$',  # Numbers
-        ]
-        # the hyper parameter is set according to http://jmzhu.logpai.com/pub/pjhe_icws2017.pdf
-        st = 0.5  # Similarity threshold
-        depth = 5  # Depth of all leaf nodes
-
-
-        parser = Drain.LogParser(log_format, indir=input_dir, outdir=output_dir, depth=depth, st=st, rex=regex, keep_para=False)
-        parser.parse(log_file)
 
 
 def hdfs_sampling(log_file, window='session'):
@@ -62,9 +72,9 @@ def hdfs_sampling(log_file, window='session'):
     df = pd.read_csv(log_file, engine='c',
             na_filter=False, memory_map=True, dtype={'Date':object, "Time": object})
 
-    with open(output_dir + "hdfs_log_templates.json", "r") as f:
-        event_num = json.load(f)
-    df["EventId"] = df["EventId"].apply(lambda x: event_num.get(x, -1))
+    # with open(output_dir + "hdfs_log_templates.json", "r") as f:
+    #     event_num = json.load(f)
+    # df["EventId"] = df["EventId"].apply(lambda x: event_num.get(x, -1))
 
     data_dict = defaultdict(list) #preserve insertion order of items
     for idx, row in tqdm(df.iterrows()):
@@ -117,9 +127,9 @@ if __name__ == "__main__":
     # 1. parse HDFS log
     log_format = '<Date> <Time> <Pid> <Level> <Component>: <Content>'  # HDFS log format
     
-    parser(input_dir, output_dir, log_file, log_format, 'drain')
+    parser(input_dir, output_dir, log_file, log_format)
     
-    mapping()
+    # mapping()
     # we group log keys into log sequences based on the session ID in each log message
     hdfs_sampling(log_structured_file)
     

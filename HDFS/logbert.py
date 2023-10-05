@@ -3,9 +3,6 @@ sys.path.append("../")
 sys.path.append("../../")
 
 import os
-dirname = os.path.dirname(__file__)
-filename = os.path.join(dirname, '../deeplog')
-
 
 import argparse
 import torch
