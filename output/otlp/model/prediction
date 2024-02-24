@@ -1,0 +1,639 @@
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 118 , # of total logkey 297, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 79 , # of total logkey 207, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 55 , # of total logkey 134, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 28 , # of total logkey 58, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 20 , # of total logkey 57, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 57, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 19 , # of total logkey 56, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 11 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 11 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 14 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 20 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 20 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 25 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 11 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 9 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 14 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 11 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 14 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 20 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 15 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 17 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 21 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 21 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 14 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 10 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 19 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 9 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 14 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 16 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 12 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 18 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 11 , # of total logkey 40, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 13 , # of total logkey 29, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 9 , # of total logkey 24, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 10 , # of total logkey 23, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 9 , # of total logkey 18, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 16, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 16, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 14, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 13, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 13, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 7 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 8 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 7 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 12, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 6 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 7 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 11, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 10, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 4 , # of total logkey 9, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 8, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 8, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 1, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 7, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 5 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 6, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 3 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 2 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 4 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 0 , # of total logkey 5, deepSVDD_label: 0, predict: normal
+
+#time anomaly: 0 # of undetected_tokens: 0, # of masked_tokens: 1 , # of total logkey 5, deepSVDD_label: 0, predict: normal

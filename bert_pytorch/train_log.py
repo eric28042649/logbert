@@ -17,6 +17,7 @@ class Trainer():
         self.device = options["device"]
         self.model_dir = options["model_dir"]
         self.model_path = options["model_path"]
+        self.train_path = options["train_path"]
         self.vocab_path = options["vocab_path"]
         self.output_path = options["output_dir"]
         self.window_size = options["window_size"]
@@ -53,13 +54,13 @@ class Trainer():
         save_parameters(options, self.model_dir + "parameters.txt")
 
     def train(self):
-
+            
         print("Loading vocab", self.vocab_path)
         vocab = WordVocab.load_vocab(self.vocab_path)
         print("vocab Size: ", len(vocab))
 
         print("\nLoading Train Dataset")
-        logkey_train, logkey_valid, time_train, time_valid = generate_train_valid(self.output_path + "train", window_size=self.window_size,
+        logkey_train, logkey_valid, time_train, time_valid = generate_train_valid(self.train_path, window_size=self.window_size,
                                      adaptive_window=self.adaptive_window,
                                      valid_size=self.valid_ratio,
                                      sample_ratio=self.sample_ratio,
@@ -188,7 +189,7 @@ class Trainer():
         plt.title("epoch vs train loss vs valid loss")
         plt.legend()
         plt.savefig(self.model_dir + "train_valid_loss.png")
-        plt.show()
+        # plt.show()
         print("plot done")
 
 

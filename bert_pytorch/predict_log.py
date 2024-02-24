@@ -13,7 +13,7 @@ from bert_pytorch.dataset import LogDataset
 from bert_pytorch.dataset.sample import fixed_window
 
 
-def compute_anomaly(results, params, seq_threshold=0.5):
+def compute_anomaly(results, params, seq_threshold=0.1):
     is_logkey = params["is_logkey"]
     is_time = params["is_time"]
     total_errors = 0
@@ -63,6 +63,7 @@ class Predictor():
         self.model_dir = options["model_dir"]
         self.gaussian_mean = options["gaussian_mean"]
         self.gaussian_std = options["gaussian_std"]
+        self.seq_threshold = options["seq_threshold"]
 
         self.is_logkey = options["is_logkey"]
         self.is_time = options["is_time"]
@@ -98,7 +99,7 @@ class Predictor():
         """
         log_seqs = []
         tim_seqs = []
-        with open(output_dir + file_name, "r") as f:
+        with open(output_dir + "process/" + file_name, "r") as f:
             for idx, line in tqdm(enumerate(f.readlines())):
                 #if idx > 40: break
                 log_seq, tim_seq = fixed_window(line, window_size,
@@ -128,6 +129,7 @@ class Predictor():
         tim_seqs = tim_seqs[test_sort_index]
 
         print(f"{file_name} size: {len(log_seqs)}")
+        # print(f"log_seqs: {log_seqs}")
         return log_seqs, tim_seqs
 
     def helper(self, model, output_dir, file_name, vocab, scale=None, error_dict=None):
@@ -176,7 +178,8 @@ class Predictor():
                                "undetected_tokens": 0,
                                "masked_tokens": 0,
                                "total_logkey": torch.sum(data["bert_input"][i] > 0).item(),
-                               "deepSVDD_label": 0
+                               "deepSVDD_label": 0,
+                               "prediect": "normal"
                                }
 
                 mask_index = data["bert_label"][i] > 0
@@ -202,17 +205,21 @@ class Predictor():
                     #
                     # if dist > 0.25:
                     #     pass
+                if seq_results["undetected_tokens"] > seq_results["masked_tokens"] * 0.4:
+                    seq_results["predict"] = "anomaly"
+                else:
+                    seq_results["predict"] = "normal"
 
                 if idx < 10 or idx % 1000 == 0:
                     print(
-                        "{}, #time anomaly: {} # of undetected_tokens: {}, # of masked_tokens: {} , "
-                        "# of total logkey {}, deepSVDD_label: {} \n".format(
-                            file_name,
+                        "#time anomaly: {} # of undetected_tokens: {}, # of masked_tokens: {} , "
+                        "# of total logkey {}, deepSVDD_label: {}, predict: {} \n".format(
                             seq_results["num_error"],
                             seq_results["undetected_tokens"],
                             seq_results["masked_tokens"],
                             seq_results["total_logkey"],
-                            seq_results['deepSVDD_label']
+                            seq_results['deepSVDD_label'],
+                            seq_results["predict"]
                         )
                     )
                 total_results.append(seq_results)

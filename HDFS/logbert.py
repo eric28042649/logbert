@@ -3,69 +3,22 @@ sys.path.append("../")
 sys.path.append("../../")
 
 import os
-
 import argparse
-import torch
+import schedule
+import time
+from datetime import datetime, timedelta
+import pandas as pd
+from option import options
 
+import torch
 from bert_pytorch.dataset import WordVocab
 from bert_pytorch import Predictor, Trainer
 from bert_pytorch.dataset.utils import seed_everything
 
-options = dict()
-options['device'] = 'cuda' if torch.cuda.is_available() else 'cpu'
-options["output_dir"] = "../output/hdfs/"
-options["model_dir"] = options["output_dir"] + "bert/"
-options["model_path"] = options["model_dir"] + "best_bert.pth"
-options["train_vocab"] = options["output_dir"] + "train"
-options["vocab_path"] = options["output_dir"] + "vocab.pkl"  # pickle file
+from detector import Detector
+from elasticsearch_client import ElasticsearchClient
+from data_process_drain3 import process
 
-options["window_size"] = 128
-options["adaptive_window"] = True
-options["seq_len"] = 512
-options["max_len"] = 512 # for position embedding
-options["min_len"] = 10
-options["mask_ratio"] = 0.65
-# sample ratio
-options["train_ratio"] = 1
-options["valid_ratio"] = 0.1
-options["test_ratio"] = 1
-
-# features
-options["is_logkey"] = True
-options["is_time"] = False
-
-options["hypersphere_loss"] = True
-options["hypersphere_loss_test"] = False
-
-options["scale"] = None # MinMaxScaler()
-options["scale_path"] = options["model_dir"] + "scale.pkl"
-
-# model
-options["hidden"] = 256 # embedding size
-options["layers"] = 4
-options["attn_heads"] = 4
-
-options["epochs"] = 200
-options["n_epochs_stop"] = 10
-options["batch_size"] = 32
-
-options["corpus_lines"] = None
-options["on_memory"] = True
-options["num_workers"] = 5
-options["lr"] = 1e-3
-options["adam_beta1"] = 0.9
-options["adam_beta2"] = 0.999
-options["adam_weight_decay"] = 0.00
-options["with_cuda"]= True
-options["cuda_devices"] = None
-options["log_freq"] = None
-
-# predict
-options["num_candidates"] = 6
-options["gaussian_mean"] = 0
-options["gaussian_std"] = 1
-
-seed_everything(seed=1234)
 
 if not os.path.exists(options['model_dir']):
     os.makedirs(options['model_dir'], exist_ok=True)
@@ -76,7 +29,12 @@ print("mask ratio", options["mask_ratio"])
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    es_client = ElasticsearchClient(options)
+    
     subparsers = parser.add_subparsers()
+
+    process_parser = subparsers.add_parser('process')
+    process_parser.set_defaults(mode='process')
 
     train_parser = subparsers.add_parser('train')
     train_parser.set_defaults(mode='train')
@@ -92,24 +50,82 @@ if __name__ == "__main__":
     vocab_parser.add_argument("-e", "--encoding", type=str, default="utf-8")
     vocab_parser.add_argument("-m", "--min_freq", type=int, default=1)
 
+    detect_parser = subparsers.add_parser('detect')
+    detect_parser.set_defaults(mode='detect')
+    
+    online_detect_parser = subparsers.add_parser('online_detect')
+    online_detect_parser.set_defaults(mode='online_detect')
+
+    deploy_parser = subparsers.add_parser('deploy')
+    deploy_parser.set_defaults(mode='deploy')
+    deploy_parser.add_argument("-e", "--encoding", type=str, default="utf-8")
+    deploy_parser.add_argument("-s", "--vocab_size", type=int, default=None)
+    deploy_parser.add_argument("-m", "--min_freq", type=int, default=1)
+    
     args = parser.parse_args()
     print("arguments", args)
+    
+    # Each round executes three actions: "query, detect, write back"
+    def online_detect_job():
+        end_time = datetime.utcnow()
+        start_time = end_time - timedelta(minutes=options["detect_period"])
+        start_time = start_time.isoformat() + "Z"
+        
+        detector = Detector(options)
+        log_df = es_client.query(last_timestamp=start_time) # query from es
+        if not log_df.empty:
+            result_df = detector.detect_seq(log_df) # detect logs
+            es_client.write_result_to_es(result_df) # write the results back to es
 
-    if args.mode == 'train':
+    def train_job():
+        print("\n========training start========\n")
+        end_time = datetime.utcnow()
+        start_time = end_time - timedelta(days=options["retrain_period"])
+        start_time = start_time.isoformat() + "Z"
+        
+        log_df = es_client.query(last_timestamp=start_time)
+        log_df.to_csv(options["input_dir"] + "exported_data.csv", index=False)
+        if not log_df.empty:
+            process(options)
+            with open(options["train_path"], "r", encoding=args.encoding) as f:
+                texts = f.readlines()
+            vocab = WordVocab(texts, max_size=args.vocab_size, min_freq=args.min_freq)
+            vocab.save_vocab(options["vocab_path"])
+            Trainer(options).train()
+            es_client.update_last_train(end_time, datetime.utcnow().isoformat())
+        print("\n========training finish========\n")
+    
+    if args.mode == 'process':
+        process(options)
+    
+    elif args.mode == 'train':
         Trainer(options).train()
 
     elif args.mode == 'predict':
         Predictor(options).predict()
 
     elif args.mode == 'vocab':
-        with open(options["train_vocab"], "r", encoding=args.encoding) as f:
+        with open(options["train_path"], "r", encoding=args.encoding) as f:
             texts = f.readlines()
         vocab = WordVocab(texts, max_size=args.vocab_size, min_freq=args.min_freq)
         print("VOCAB SIZE:", len(vocab))
         print("save vocab in", options["vocab_path"])
         vocab.save_vocab(options["vocab_path"])
 
+    elif args.mode == 'detect':
+        print("\n========detecting start========\n")
+        detector = Detector(options)
+        log_df = pd.read_csv('../dataset/otlp/exported_data_1114-1120.csv')
+        result_df = detector.detect_seq(log_df)
+        result_df.to_csv(options["result_dir"] + "result_df_1114-1120.csv")
+        print("\n========detecting finish========\n")
+        
 
-
-
+    elif args.mode == 'deploy':
+        train_job()
+        schedule.every(options["detect_period"]).minutes.at(":00").do(online_detect_job)
+        schedule.every(options["retrain_period"]).days.at("00:00").do(train_job)
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
 

@@ -11,8 +11,7 @@ import numpy as np
 class PredictorModified(Predictor):
     def __init__(self, options):
         super().__init__(options)
-        # 加载模型
-        self.model = torch.load(self.model_path)
+        self.model = torch.load(self.model_path, map_location=torch.device('cpu'))
         self.model.to(self.device)
         self.model.eval()
         print('Model loaded from: {}'.format(self.model_path))
@@ -44,7 +43,7 @@ class PredictorModified(Predictor):
         # print(f"log_seq: {log_seq} tim_seq: {tim_seq}")
         return log_seq, tim_seq
     
-    def helper(self, model, output_dir, log_seqs, vocab, scale, error_dict=None):
+    def helper(self, model, output_dir, log_seqs, _log_ignore, vocab, scale, error_dict=None):
         total_results = []
         total_errors = []
         output_results = []
@@ -61,9 +60,11 @@ class PredictorModified(Predictor):
             logkey_test = logkey_test[rand_index]
 
 
-        seq_dataset = LogDataset(logkey_test, time_test, vocab, seq_len=self.seq_len,
+        seq_dataset = LogDataset(logkey_test, time_test, vocab, seq_len=self.seq_len, log_ignore=_log_ignore,
                                  corpus_lines=self.corpus_lines, on_memory=self.on_memory, predict_mode=True, mask_ratio=self.mask_ratio)
 
+        # print("seq_dataset: ", seq_dataset[0])
+        
         # use large batch size in test data
         data_loader = DataLoader(seq_dataset, batch_size=self.batch_size, num_workers=self.num_workers,
                                  collate_fn=seq_dataset.collate_fn)
@@ -132,10 +133,9 @@ class PredictorModified(Predictor):
                 total_results.append(seq_results)
         return total_results, output_cls
     
-    def predict_single_sequence(self, log_seqs):
-        test_results, test_errors = self.helper(self.model, self.output_dir, log_seqs, self.vocab, self.scale, self.error_dict)
+    def predict_single_sequence(self, log_seqs, logkeys_ignore=None):
+        test_results, test_errors = self.helper(self.model, self.output_dir, log_seqs, logkeys_ignore, self.vocab, self.scale, self.error_dict)
 
-        seq_threshold = 0.4
         
         params = {
             "is_logkey": self.is_logkey, 
@@ -144,6 +144,8 @@ class PredictorModified(Predictor):
             "hypersphere_loss_test": self.hypersphere_loss_test
         }
         
-        is_anomaly = compute_anomaly(test_results, params, seq_threshold)
+        is_anomaly = compute_anomaly(test_results, params, self.seq_threshold)
+        
+        print(f"is_anomaly: {is_anomaly}")
         
         return bool(is_anomaly)

@@ -5,7 +5,7 @@ import numpy as np
 from collections import defaultdict
 
 class LogDataset(Dataset):
-    def __init__(self, log_corpus, time_corpus, vocab, seq_len, corpus_lines=None, encoding="utf-8", on_memory=True, predict_mode=False, mask_ratio=0.15):
+    def __init__(self, log_corpus, time_corpus, vocab, seq_len, log_ignore=None, corpus_lines=None, encoding="utf-8", on_memory=True, predict_mode=False, mask_ratio=0.15):
         """
 
         :param corpus: log sessions/line
@@ -24,6 +24,11 @@ class LogDataset(Dataset):
 
         self.predict_mode = predict_mode
         self.log_corpus = log_corpus
+        
+        if log_ignore:
+            self.log_ignore = log_ignore
+        else:
+            self.log_ignore = None
         self.time_corpus = time_corpus
         self.corpus_lines = len(log_corpus)
 
@@ -33,9 +38,12 @@ class LogDataset(Dataset):
         return self.corpus_lines
 
     def __getitem__(self, idx):
-        k, t = self.log_corpus[idx], self.time_corpus[idx]
-
-        k_masked, k_label, t_masked, t_label = self.random_item(k, t)
+        if self.log_ignore:
+            k, t, ignore = self.log_corpus[idx], self.time_corpus[idx], self.log_ignore[idx]
+        else:
+            k, t, ignore = self.log_corpus[idx], self.time_corpus[idx], None
+            
+        k_masked, k_label, t_masked, t_label = self.random_item_fixed(k, t, ignore)
 
         # [CLS] tag = SOS tag, [SEP] tag = EOS tag
         k = [self.vocab.sos_index] + k_masked
@@ -94,6 +102,51 @@ class LogDataset(Dataset):
                 time_label.append(0)
 
         return tokens, output_label, time_intervals, time_label
+
+    def random_item_fixed(self, k, t, ignore):
+        tokens = list(k)
+        # print(f"tokens: {tokens}, self.mask_ratio: {self.mask_ratio}")
+        output_label = []
+
+        time_intervals = list(t)
+        time_label = []
+
+         # 計算需要遮蔽的 tokens 數量
+        num_to_mask = int(len(tokens) * self.mask_ratio)
+
+        # 隨機選擇要遮蔽的 tokens 的索引
+        # np.random.seed(10)
+        
+        # 創建一個包含所有可能索引的列表
+        all_indices = list(range(len(tokens)))
+
+        if ignore:
+            # 從這個列表中移除log_ignore中的索引
+            maskable_indices = [idx for idx in all_indices if idx not in ignore]
+            # 從過濾後的索引列表中隨機選擇
+            mask_indices = np.random.choice(maskable_indices, num_to_mask, replace=False)
+        else:
+            mask_indices = np.random.choice(all_indices, num_to_mask, replace=False)
+            
+        # mask_indices = np.random.choice(len(tokens), num_to_mask, replace=False)
+        # print(f"ignore_indices: {ignore}, mask_indices: {mask_indices}")
+        for i, token in enumerate(tokens):
+            time_int = time_intervals[i]
+        
+            # 如果當前索引在選擇的遮蔽索引中
+            if i in mask_indices:
+                tokens[i] = self.vocab.mask_index
+                # print(f"self.vocab.mask_index: {self.vocab.mask_index}")
+                output_label.append(self.vocab.stoi.get(token, self.vocab.unk_index))
+                time_intervals[i] = 0  # time mask value = 0
+                time_label.append(time_int)
+            else:
+                tokens[i] = self.vocab.stoi.get(token, self.vocab.unk_index)
+                output_label.append(0)
+                time_label.append(0)
+
+        return tokens, output_label, time_intervals, time_label
+
 
     def collate_fn(self, batch, percentile=100, dynamical_pad=True):
         lens = [len(seq[0]) for seq in batch]
