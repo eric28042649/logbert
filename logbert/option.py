@@ -11,12 +11,12 @@ options["model_dir"] = options["output_dir"] + "model/"
 options["model_path"] = options["model_dir"] + "best_bert.pth"
 options["result_dir"] = options["model_dir"] + "result/"
 options["train_path"] = options["output_dir"] + "process/train"
-options["vocab_path"] = options["model_dir"] + "vocab.pkl"  # pickle file
+options["vocab_path"] = options["model_dir"] + "vocab.pkl"
 
 options["window_size"] = 128
 options["adaptive_window"] = True
 options["seq_len"] = 512
-options["max_len"] = 512 # for position embedding
+options["max_len"] = 512
 options["min_len"] = 3
 options["mask_ratio"] = 0.5
 # sample ratio
@@ -31,11 +31,11 @@ options["is_time"] = False
 options["hypersphere_loss"] = True
 options["hypersphere_loss_test"] = False
 
-options["scale"] = None # MinMaxScaler()
+options["scale"] = None
 options["scale_path"] = options["model_dir"] + "scale.pkl"
 
 # model
-options["hidden"] = 256 # embedding size
+options["hidden"] = 256
 options["layers"] = 4
 options["attn_heads"] = 4
 
@@ -61,26 +61,22 @@ options["gaussian_std"] = 1
 options["seq_threshold"] = 0.2
 
 # es
-try:
-    es_host = os.environ['ES_HOST']
-    es_scheme = os.environ['ES_SCHEME']
-    es_password = os.environ['ES_PASSWORD']
-    service_name = os.environ['SERVICE_NAME']
-except:
-    es_host = "log-monitor-es-http"
-    es_scheme = "http"
-    es_password = "elastic"
-    service_name = "service_api_ws1_smt-ecps-api"
+es_host = os.environ.get('ES_HOST', "log-monitor-es-http")
+es_scheme = os.environ.get('ES_SCHEME', "http")
+es_account = os.environ.get('ES_ACCOUNT', "elastic")
+es_password = os.environ.get('ES_PASSWORD', "elastic")
+service_name = os.environ.get('SERVICE_NAME', "service_api_ws1_smt-ecps-api")
 
 es = Elasticsearch(
     [{'host': es_host, 'port': 9200, 'scheme': es_scheme}],
-    basic_auth=('elastic', es_password),
+    basic_auth=(es_account, es_password),
     verify_certs=False
 )
 options["elasticsearch"] = es
+options["service_name"] = service_name
+
 options["read_index"] = 'traces-apm-default'
 options["write_index"] = 'logbert_prediction'
-options["service_name"] = service_name
 options["state_index"] = 'logbert_state'
 
 # schedule

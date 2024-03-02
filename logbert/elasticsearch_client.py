@@ -64,7 +64,6 @@ class ElasticsearchClient():
                     ],
                     "must": [
                         {"term": {"service.name": self.options["service_name"]}},
-                        
                     ],
                     "should": [
                         {"term": {"processor.event": "transaction"}},

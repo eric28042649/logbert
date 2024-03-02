@@ -81,6 +81,7 @@ if __name__ == "__main__":
         print("\n========training start========\n")
         end_time = datetime.utcnow()
         start_time = end_time - timedelta(days=options["retrain_period"])
+        end_time = end_time.isoformat() + "Z"
         start_time = start_time.isoformat() + "Z"
         
         log_df = es_client.query(last_timestamp=start_time)

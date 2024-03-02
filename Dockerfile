@@ -19,6 +19,6 @@ ENV PATH /opt/conda/envs/logbert/bin:$PATH
 ENV CONDA_DEFAULT_ENV logbert
 
 COPY . /app
-WORKDIR /app/HDFS
+WORKDIR /app/logbert
 
 CMD ["python", "logbert.py", "deploy"]
