@@ -4,9 +4,9 @@ from elasticsearch import Elasticsearch
 
 options = dict()
 options['device'] = 'cuda' if torch.cuda.is_available() else 'cpu'
-options["input_dir"] = "../dataset/otlp_1209/export_data/"
-options["output_dir"] = "../output/otlp_1209/"
-options["log_file"]   = "exported_data_1209_noslash.csv"
+options["input_dir"] = "../dataset/otlp/export_data/"
+options["output_dir"] = "../output/otlp/"
+options["log_file"]   = "exported_data_noslash.csv"
 options["model_dir"] = options["output_dir"] + "model/"
 options["model_path"] = options["model_dir"] + "best_bert.pth"
 options["result_dir"] = options["model_dir"] + "result/"

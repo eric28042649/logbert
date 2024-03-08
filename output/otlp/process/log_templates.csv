@@ -1,0 +1,47 @@
+TemplateId,LogTemplate
+1,db-query-span
+2,TestTrace
+3,api-request-span
+4,compute-span
+5,/smt_ecps_api/swagger/index.html
+6,/smt_ecps_api/swagger/v1/swagger.json
+7,smt_ecps_api/Auth/Login
+8,x-forwarded-for :
+9,INCR
+10,Enqueued
+11,Sent
+12,ResponseReceived
+13,HTTP POST
+14,Select SFCS Database
+15,smt_ecps_api/Auth/GetCurrentUser
+13,HTTP <*>
+16,GET
+17,/smt-ecps-api/
+18,Failed to determine the https port for redirect.
+19,"x-forwarded-for : 10.50.197.107,10.42.11.0"
+20,/smt-ecps-api/swagger
+21,/smt-ecps-api/swagger/index.html
+22,/smt-ecps-api/swagger/swagger-ui.css
+23,/smt-ecps-api/swagger/swagger-ui-standalone-preset.js
+24,/smt-ecps-api/swagger/swagger-ui-bundle.js
+25,/smt-ecps-api/swagger/v1/swagger.json
+26,/smt-ecps-api/swagger/favicon-32x32.png
+27,smt-ecps-api/Auth/Login
+28,smt-ecps-api/Auth/GetCurrentUser
+29,smt-ecps-api/Line/GetSmtLine
+14,Select <*> Database
+19,x-forwarded-for : <*>
+30,smt-ecps-api/PnStd/GetPnStdPnList
+31,smt-ecps-api/PnStd/GetPnStdDataList
+32,smt-ecps-api/Line/GetLineEqp
+33,smt-ecps-api/Line/GetPnList
+34,smt-ecps-api/Line/GetPnChart
+35,smt-ecps-api/PnStd/GetPnLineBalanceDataList
+36,smt-ecps-api/Line/GetStdDataList
+37,smt-ecps-api/PnStd/UploadPnStdFile
+38,Execute SMT Database
+39,smt-ecps-api/PnStd/GetPnStdModel
+40,smt-ecps-api/PnStd/ExportPnStdExcelTemplate
+41,smt-ecps-api/Line/GetStdData
+42,smt-ecps-api/Line/GetStdDetail
+43,smt-ecps-api/Line/GetModel

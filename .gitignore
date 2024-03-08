@@ -1,8 +1,14 @@
-*.csv
-*.log
+# *.csv
+# *.log
+
 .ipynb_checkpoints
-dataset/otlp/*
-output/otlp/process/*
+
+dataset/otlp_1209/*
+dataset/otlp_f1/*
+
+output/otlp_1119/*
+output/otlp_1209/*
+output/otlp_parser_config/*
 
 # Editors
 .vscode/
