@@ -3,8 +3,8 @@
 
 .ipynb_checkpoints
 
-# dataset/otlp_1209/
-# dataset/otlp_f1/
+dataset/otlp_1209/
+dataset/otlp_f1/
 
 output/otlp_1119/
 output/otlp_1209/
